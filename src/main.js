@@ -1,6 +1,13 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import "@/styles/index.scss";
 
-createApp(App).use(store).use(router).mount('#app')
+import "@UI/styles/ui.scss";
+if (process.env.NODE_ENV === "production") {
+  const { mockXHR } = require("../mock");
+  mockXHR();
+}
+const Vue = createApp(App);
+Vue.use(store).use(router).mount("#app");
