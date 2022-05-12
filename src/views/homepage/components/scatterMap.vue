@@ -5,7 +5,7 @@
 <script>
 import * as echarts from "echarts";
 import { onMounted, ref, onBeforeUnmount, watch, reactive } from "vue";
-import { debounce, getGeoJson } from "@/utils/index.js";
+import { debounce, getGeoJson, filterName } from "@/utils/index.js";
 import useResize from "@/componentApi/useResize";
 import { selectCityData } from "@/api/chart";
 export default {
@@ -56,36 +56,6 @@ export default {
       });
       initEcharts(data);
     };
-
-    const filterName = (name) => {
-      switch (name) {
-        case "内蒙古自治区":
-          name = "内蒙古";
-          break;
-        case "西藏自治区":
-          name = "西藏";
-          break;
-        case "新疆维吾尔自治区":
-          name = "新疆";
-          break;
-        case "宁夏回族自治区":
-          name = "宁夏";
-          break;
-        case "广西壮族自治区":
-          name = "广西";
-          break;
-        case "香港特别行政区":
-          name = "香港";
-          break;
-        case "澳门特别行政区":
-          name = "澳门";
-          break;
-        default:
-          break;
-      }
-      return name;
-    };
-
     const initEcharts = (data) => {
       myChart = echarts.init(scatterMap.value);
       if (parentInfo.value.length === 1) {

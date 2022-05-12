@@ -5,33 +5,30 @@
         <div class="echartList">
           <div class="itemChart">
             <four-angel>
-              <gauage-Chart />
+              <gauage-chart />
             </four-angel>
           </div>
           <div class="itemChart">
-            <four-angel> </four-angel>
+            <four-angel>
+              <tree-chart />
+            </four-angel>
           </div>
           <div class="itemChart">
-            <four-angel> </four-angel>
+            <four-angel>
+              <radar-chart />
+            </four-angel>
           </div>
         </div>
       </z-col>
       <z-col :span="10">
-        <count-to :value="sum" suffix="万" :speed="20" />
-        <div style="width: 100%; height: 85%"></div>
+        <four-angel>
+          <component :is="mapType" @changeMap="getMap"
+        /></four-angel>
       </z-col>
       <z-col :span="7">
-        <div class="echartList">
-          <div class="itemChart">
-            <four-angel> </four-angel>
-          </div>
-          <div class="itemChart">
-            <four-angel> </four-angel>
-          </div>
-          <div class="itemChart">
-            <four-angel> </four-angel>
-          </div>
-        </div>
+        <four-angel>
+          <graph-chart />
+        </four-angel>
       </z-col>
     </z-row>
   </div>
@@ -39,36 +36,41 @@
 
 <script>
 import { ZRow, ZCol } from "@UI/components";
-import useResize from "@/componentApi/useResize";
 import {
   gauageChart,
-  typeCount,
-  wordChart,
-  scatterMap,
-  funnelChart,
-  liquidChart,
-  lineChart,
+  treeChart,
+  radarChart,
+  pointMap,
+  hotMap,
+  morePointMap,
+  graphChart,
 } from "./components";
 import fourAngel from "@/components/fourAngel";
+import { ref } from "vue";
 export default {
-  name: "home-index",
+  name: "more-view",
   components: {
     ZRow,
     ZCol,
     gauageChart,
     fourAngel,
-    typeCount,
-    wordChart,
-    scatterMap,
-    funnelChart,
-    liquidChart,
-    lineChart,
+    treeChart,
+    radarChart,
+    pointMap,
+    hotMap,
+    morePointMap,
+    graphChart,
   },
   setup() {
-    const { year, sum } = useResize();
+    const mapType = ref("pointMap");
+
+    const getMap = (val) => {
+      mapType.value = val;
+    };
+
     return {
-      year,
-      sum,
+      mapType,
+      getMap,
     };
   },
 };

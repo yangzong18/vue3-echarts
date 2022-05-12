@@ -81,3 +81,37 @@ export function getMapInfo(abcode) {
     });
   });
 }
+
+/**
+ * 修改省的名字
+ * @param {string} name
+ * @returns {string}
+ */
+export function filterName(name) {
+  switch (name) {
+    case "内蒙古自治区":
+      name = "内蒙古";
+      break;
+    case "西藏自治区":
+      name = "西藏";
+      break;
+    case "新疆维吾尔自治区":
+      name = "新疆";
+      break;
+    case "宁夏回族自治区":
+      name = "宁夏";
+      break;
+    case "广西壮族自治区":
+      name = "广西";
+      break;
+    case "香港特别行政区":
+      name = "香港";
+      break;
+    case "澳门特别行政区":
+      name = "澳门";
+      break;
+    default:
+      break;
+  }
+  return name;
+}
