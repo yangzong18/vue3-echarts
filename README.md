@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://github.com/yangzong18/vue3-echarts/">
     <img src="https://images.gitee.com/uploads/images/2020/0906/151518_824b889d_7647779.png" alt="Logo" width="250">
-   <h3 align="center"> vue3-bigData</h3>
+   <h3 align="center"> vue3-echarts</h3>
   </a>
 </p>
 
