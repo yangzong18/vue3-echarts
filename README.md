@@ -18,7 +18,7 @@
 
 ## 简介
 
-[vue3-bigData](https://gist006.gitee.io/vue3-bigdata)是一个可视化系统，基于[vue3.0](https://github.com/vuejs/vue-next) 和 [echarts](https://github.com/apache/incubator-echarts)实现，使用 vue 的最新的技术栈，包括各种可视化图表。
+[vue3-echarts](https://gist006.gitee.io/vue3-bigdata)是一个可视化系统，基于[vue3.0](https://github.com/vuejs/vue-next) 和 [echarts](https://github.com/apache/incubator-echarts)实现，使用 vue 的最新的技术栈，包括各种可视化图表。
 
 ## 前序准备
 
