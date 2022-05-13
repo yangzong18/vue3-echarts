@@ -9,7 +9,7 @@
     <a href="https://github.com/yangzong18/vue3-echarts"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://gist006.gitee.io/vue3-bigdata">在线预览</a>
+    <a href="https://yangzong18.github.io/vue3-echarts">在线预览</a>
     ·
     <a href="https://github.com/yangzong18/vue3-echarts/issues">提出Bug</a>
     ·
@@ -100,9 +100,9 @@
 
 ```
 # 克隆项目
-git clone https://github.com/biubiubiu01/vue3-bigData.git
+git clone https://github.com/yangzong18/vue3-echarts.git
 # 进入项目目录
-cd vue3-bigData
+cd vue3-echarts
 # 安装依赖
 npm i
 # 本地开发 启动项目
@@ -120,8 +120,8 @@ npm run test
 
 ## Online Demo
 
-[在线 Demo](https://gist006.gitee.io/vue3-bigdata/#/homepage)
+[在线 Demo](https://yangzong18.github.io/vue3-echarts)
 
 ## 最后
 
-开源不易，若觉得这个项目对你有用，可以点个[star](https://github.com/biubiubiu01/vue3-bigData)，欢迎提出建议和 bug :smile: 。
+开源不易，若觉得这个项目对你有用，可以点个[star](https://github.com/yangzong18/vue3-echarts)，欢迎提出建议和 bug :smile: 。
